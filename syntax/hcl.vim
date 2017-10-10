@@ -6,6 +6,7 @@ endif
 syn match hclEqual '='
 syn match hclSimpleString '"[^\"]*"'
 syn region hclComment display oneline start='\%\(^\|\s\)#' end='$'
+syn region hclComment display oneline start='\%\(^\|\s\)//' end='$'
 syn region hclInterpolation display oneline start='(' end=')' contains=hclInterpolation,hclSimpleString
 syn region hclSmartString display oneline start='"' end='"\s*$' contains=hclInterpolation
 
